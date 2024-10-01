@@ -1,6 +1,7 @@
 import { User } from '../models/userModel.js';
 import { hashPassword, createJWT, comparePassword } from '../modules/auth.js';
 
+// Create User function
 export const createUser = async (req, res, next) => {
   try {
     const hashedPassword = await hashPassword(req.body.password);
